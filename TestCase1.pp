@@ -15,7 +15,8 @@ type
 	procedure TearDown; override;
   published
 	procedure ZeroTest;
-    procedure OneDigitTest;	
+    procedure OneDigitTest;
+    procedure TwoDigitTest;	
   end;
   
 implementation
@@ -38,6 +39,11 @@ end;
 procedure TTestCase1.OneDigitTest;
 begin
   AssertEquals(10, FConverter.Convert(8));
+end;
+
+procedure TTestCase1.TwoDigitTest;
+begin
+  AssertEquals(50, FConverter.Convert(40));
 end;
 
 initialization 
