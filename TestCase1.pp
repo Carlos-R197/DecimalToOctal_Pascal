@@ -14,7 +14,8 @@ type
     procedure SetUp; override;
 	procedure TearDown; override;
   published
-	procedure ZeroTest;	
+	procedure ZeroTest;
+    procedure OneDigitTest;	
   end;
   
 implementation
@@ -31,7 +32,12 @@ end;
 
 procedure TTestCase1.ZeroTest;
 begin
-  AssertEquals(0, FConverter.Convert(0))
+  AssertEquals(0, FConverter.Convert(0));
+end;
+
+procedure TTestCase1.OneDigitTest;
+begin
+  AssertEquals(10, FConverter.Convert(8));
 end;
 
 initialization 
